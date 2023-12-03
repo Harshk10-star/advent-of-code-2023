@@ -1,24 +1,21 @@
 def get_combined_number(line):
-    combinedNumber = ''
-    combinedNumber = get_first_half(line, combinedNumber)
-    combinedNumber = get_second_half(line, combinedNumber)
-    return int(combinedNumber)
+    left = get_first_half(line)
+    right = get_second_half(line)
+    return int(left + right)
 
 
-def get_first_half(line, combinedNumber):
+def get_first_half(line):
     for i in range(len(line)):
         if line[i].isnumeric():
-            combinedNumber = line[i] + combinedNumber
-            break
-    return combinedNumber
+            return line[i]
+    return ''
 
 
-def get_second_half(line, combinedNumber):
+def get_second_half(line):
     for i in range(len(line) - 1, -1, -1):
         if line[i].isnumeric():
-            combinedNumber = combinedNumber + line[i]
-            break
-    return combinedNumber
+            return line[i]
+    return ''
 
 
 def main():

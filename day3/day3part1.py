@@ -47,7 +47,6 @@ if __name__ == '__main__':
         C = len(graph[0])
         visited = set()
         for i in range(R):
-
             for j in range(C):
                 if graph[i][j].isnumeric() and (i, j) not in visited:
 

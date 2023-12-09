@@ -31,7 +31,6 @@ def main():
             moves += lines[i]
             i += 1
         lines = lines[i + 1:]
-        print(lines)
         graph = get_graph_representation(lines)
         ans = count_steps(moves, graph, 0, 'AAA', 0)
         print(ans)

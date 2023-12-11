@@ -1,4 +1,3 @@
-
 def check_all_zeros(arr):
     for i in range(len(arr)):
         if arr[i] != 0:
@@ -28,8 +27,6 @@ def main():
         for line in file:
             arr = [int(n) for n in line.strip().split(' ')]
             count += get_extrapolate_count(arr)
-
     print(count)
-
 if __name__ == '__main__':
     main()
